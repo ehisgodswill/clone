@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us | VT Markets</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="oblivian-text-cufonfonts-webfont/style.css">
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <section id="head">
+        <div>
+            <h1>Why choose VT Markets</h1>
+        </div>
+        <div class="head-con">
+            <h2>A partner, not just a platform</h2>
+            <p>
+                “What it is that traders want when choosing a Forex broker?” – 
+                That is question we keep asking ourselves when we build up VT Markets. 
+                We believe that these elements are the core to define the value of us, 
+                and make us available to fulfil the needs of our clients and to deliver an exceptionally reliable service continuously.
+                    <br><br>
+                On top of that, We want to build a brand known beyond price or product. We want to be a brand for a next generation of traders. 
+                We know just what ouyr customers need, and we are flexible to change. We are a high energy, next gen trading platform, flexible to you and right by your side when you need us.
+            </p>
+        </div>
+    </section>
+    <section class="disp">
+        <div>
+            <h3>We are right beside you <br> on your trading journey</h3>
+            <p>Whether you’re just starting out or have been trading for years, our team have your back. Our platform is with you on the go and our customer service teams will be right by your side every step of the way. As you grow we will too.
+                 While our competition might be bigger than us, that makes them slow to change. We have the energy of a start up but the backing of a major trading platform. Check out why VT Market is your right choice:
+            </p>
+            <ul>
+                <li>Live account open under 5 minutes</li>
+                <li>Leverage up to 500:1</li>
+                <li>Trade over 200+ assets</li>
+                <li>Extra trading bonus available</li>
+                <li>Powerful account management portal</li>
+                <li>Deep liquidity pool</li>
+                <li>Sercured by mutiple regulators & segragated account</li>
+                <div id="btn">Start trading now</div>
+            </ul>
+        </div>
+        <div style="background-image: url(images/Company_Why-choose-us_Why-choose-VT.jpg);"></div>
+    </section>
+    <section class="award">
+        <div>
+            <h2>Multi-award winners</h2>
+            <p>We’re proud to be recognized for delivering the best customer support and trading platform awards,
+                 and aim to continue to excel across all categories in the future.</p>
+        </div>
+        <div>
+            <div id="prev" class="prev disabled" aria-disabled="true" onclick="move(-1)">&#10094</div>
+            <div id='next' class="next" onclick="move(1)">&#10095</div>
+        </div>
+
+        <script>
+            const prev= document.getElementById('prev');
+            const next= document.getElementById('next');
+            var slideno = 0
+            
+            slide(slideno);
+            
+            function move(n){
+                slide(sildeno += n)
+                alert(slideno)
+                function slide(n){
+                    var btn = document.getElementById('reg')
+                    if (n=0) {
+                        btn.style.transform = 'translate3d(0px, 0px, 0px)';
+                        prev.className += " disabled"
+                    }
+    
+                    if (n = 1){
+                        btn.style.transform = 'translate3d(-291.5px, 0px, 0px)';
+                        //    alert('hh');
+                        prev.className =  prev.className.replace('disabled','')
+                    }
+                    if (n=2) {
+                        btn.style.transform = 'translate3d(-583px, 0px, 0px)';
+                        next.className += ' disabled'
+                    }
+                }
+            }
+            </script>
+    </section>
+    <section class="regbtm"> 
+        <div>
+            <div id="reg">
+                <div><img src="/images/vt_winners01_mxg.png" alt=""></div>
+                <div><img src="/images/vt_winners02_mxg.png" alt=""></div>
+                <div><img src="/images/vt_winners03_mxg.png" alt=""></div>
+                <div><img src="/images/vt_winners04_mxg.png" alt=""></div>
+                <div><img src="/images/vt_winners05_mxg.png" alt=""></div>
+                <div><img src="/images/vt_winners06_mxg.png" alt=""></div>
+            </div>
+    </section>
+    </div>
+</body>
+</html>
