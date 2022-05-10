@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/learn-forex.css">
+    <link rel="stylesheet" href="/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Open A live Account | VT Markets</title>
+</head>
+<body>
+    <body class="page-template page-template-template_open_live_account page-template-template_open_live_account-php page page-id-182 page-child parent-pageid-184">
+       
+        <style>
+            .open_live_account_wrapper {
+                margin: 120px auto;
+            }
+        
+            .open_live_account_wrapper .open_live_account_main {
+                display: flex;
+                justify-content: space-between;
+            }
+        
+            .open_live_account_wrapper .open_live_account_left {
+                width: 500px;
+                max-width: 100%;
+            }
+        
+            .open_live_account_wrapper .open_live_account_right {
+                width: 576px;
+                max-width: 100%;
+                margin-left: 30px;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_li {
+                padding: 30px 0 40px;
+                position: relative;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_li.error .gfield_label {
+                color: #e91545;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_li.error .ginput_container .ginput_container_input {
+                border-bottom: 1px solid #e91545 !important;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_li.error .error_info {
+                display: block;
+            }
+        
+            .open_live_account_wrapper .form_body .gfield_label {
+                position: absolute;
+                font-family: 'Oblivian-UltraLight';
+                font-size: 20px;
+                top: 30px;
+                transition: all 0.2s;
+            }
+        
+            .open_live_account_wrapper .form_body .gfield_label.active {
+                top: 0px;
+                font-size: 14px;
+                color: #0051ff;
+                font-family: 'Oblivian-Regular';
+            }
+        
+            .open_live_account_wrapper .form_body .ginput_container {
+                position: relative;
+                z-index: 2;
+            }
+        
+            .open_live_account_wrapper .form_body .ginput_container input {
+                font-size: 20px;
+                width: 100%;
+                border: none;
+                background: rgba(0, 0, 0, 0);
+                font-family: 'Oblivian-UltraLight';
+            }
+            .open_live_account_wrapper .form_body .ginput_container span{
+                display: block;
+                font-size: 20px;
+                height: 24px;
+                width: 100%;
+                border: none;
+                background: rgba(0, 0, 0, 0);
+                font-family: 'Oblivian-UltraLight';
+            }
+            [contenteditable]:focus{outline: none;}
+            .open_live_account_wrapper .form_body .ginput_container input#country,.open_live_account_wrapper .form_body .ginput_container input#phoneCode,.open_live_account_wrapper .form_body .ginput_container span#country{
+                cursor: pointer;
+            }
+        
+            .open_live_account_wrapper .form_body .ginput_container .ginput_container_input {
+                padding: 0px 0 15px;
+                border-bottom: 1px solid #cccfd4;
+                box-shadow: none;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_li .ginput_container .ginput_container_input.active {
+                box-shadow: 0 1px 0 0 #0051ff;
+                border-bottom: 1px solid #0051ff !important;
+            }
+        
+            .open_live_account_wrapper .form_body .ginput_container .error_info {
+                display: none;
+                padding-top: 8px;
+                font-family: 'Oblivian-Regular';
+                font-size: 14px;
+                color: #ed164e;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_phone_code .form_body_code {
+                width: 138px;
+                margin-right: 30px;
+                float: left;
+            }
+        
+            .open_live_account_wrapper .form_body .form_body_phone_code .form_body_phone {
+                width: calc(100% - 168px);
+                float: left;
+            }
+        
+            .open_live_account_wrapper .form_body .country_code,
+            .form_body .phone_code {
+                position: absolute;
+                display: none;
+                max-height: 260px;
+                overflow: auto;
+                top: 59px;
+                background: #fff;
+                box-shadow: 0 9px 35px 0 rgba(0, 0, 0, 0.13);
+                width: 100%;
+                font-size: 14px;
+                font-family: 'Oblivian-Medium';
+                padding: 16px 24px;
+                z-index: 10;
+            }
+        
+            .open_live_account_wrapper .form_body .country_code.active,
+            .form_body .phone_code.active {
+                display: block;
+            }
+        
+            .open_live_account_wrapper .form_body .country_option,
+            .form_body .phone_option {
+                padding: 8px 0;
+                cursor: pointer;
+                word-wrap: break-word;
+            }
+        
+            .open_live_account_wrapper .form_body .ginput_container_input_select_icon {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                z-index: -1;
+                transition: all 0.2s;
+                transform: rotate(0deg);
+            }
+        
+            .open_live_account_wrapper .form_body .ginput_container_input_select_icon.active {
+                transform: rotate(180deg);
+            }
+        
+            .open_live_account_wrapper .form_body .country_option.accounr_hover,
+            .form_body .phone_option.accounr_hover {
+                color: #0051ff;
+            }
+        
+            .open_live_account_wrapper .open_live_account_form .blue_button {
+                font-size: 14px;
+                min-width: 178px;
+                cursor: pointer;
+                font-family: 'Oblivian-SemiBold';
+            }
+        
+            .open_live_account_wrapper .open_live_account_form .open_live_account_form_p {
+                font-size: 20px;
+                margin-top: 32px;
+            }
+        
+            @media (max-width:980px) {
+                .open_live_account_wrapper {
+                    margin: 80px 0;
+                }
+        
+                .open_live_account_wrapper .open_live_account_main {
+                    flex-wrap: wrap;
+                }
+        
+                .open_live_account_wrapper .open_live_account_left {
+                    width: 100%;
+                    max-width: 100%;
+                }
+        
+                .open_live_account_wrapper .open_live_account_left h2 {
+                    font-size: 32px;
+                }
+        
+                .open_live_account_wrapper .open_live_account_left h5 {
+                    font-size: 20px;
+                }
+                .open_live_account_wrapper .open_live_account_right{
+                    margin:0 auto;
+                }
+            }
+        
+            @media (max-width:768px) {
+                .open_live_account_wrapper {
+                    margin: 60px 0;
+                }
+        
+                .open_live_account_wrapper .open_live_account_right{
+                    width: 100%;
+                }
+        
+                .open_live_account_wrapper .form_body .form_body_phone_code .form_body_code,
+                .open_live_account_wrapper .form_body .form_body_phone_code .form_body_phone {
+                    width: 100%;
+                    float: none;
+                }
+        
+                .open_live_account_wrapper .open_live_account_form .open_live_account_form_p {
+                    font-size: 18px;
+                }
+            }
+        </style>
+        <div class="open_live_account_wrapper public_wrapper">
+            <div class="inner">
+                <div class="open_live_account_main">
+                    <div class="open_live_account_left">
+                        <h2>Experience Transparent and Secure Forex Trading</h2>
+                        <h5>Open your live account in under 5 minutes</h5>
+                    </div>
+                    <div class="open_live_account_right">
+                        <div class="open_live_account_form account_form_public">
+                            <div class="top_liveAccount_form" id="top_liveAccount_form">
+                                <ul class="form_body">
+                                    <li class="form_body_li">
+                                        <label class="gfield_label">First Name</label>
+                                        <div class="ginput_container">
+                                            <div class="ginput_container_input">
+                                                <input class="medium" type="text" id="firstName" autocomplete="off">
+                                            </div>
+                                            <span class="error_info">Please enter your first name</span>
+                                        </div>
+                                    </li>
+                                    <li class="form_body_li">
+                                        <label class="gfield_label">Last Name</label>
+                                        <div class="ginput_container">
+                                            <div class="ginput_container_input">
+                                                <input class="medium" type="text" id="lastName" autocomplete="off">
+                                            </div>
+                                            <span class="error_info">Please enter your last name</span>
+                                        </div>
+                                    </li>
+                                    <li class="form_body_li">
+                                        <label class="gfield_label">Country</label>
+                                        <div class="ginput_container">
+                                            <div class="ginput_container_input">
+                                                <!-- <input class="medium" type="text" id="country" autocomplete="off" readonly="readonly"> -->
+                                                <span class="medium" id="country" contenteditable="true"></span>
+                                            </div>
+                                            <div class="ginput_container_input_select_icon"><img src="/images/ginput_container_input_select_icon.webp" alt="" class="lazyloaded" data-ll-status="loaded"><noscript><img src="/wp-content/themes/vt/images/ginput_container_input_select_icon.png" alt=""></noscript></div>
+                                            <span class="error_info">Please enter a valid country</span>
+                                        </div>
+                                        <div class="country_code">
+                                            <div class="results"></div>
+                                        <div class="country_option accounr_hover" style="pointer-events: none;">Country</div><div class="country_option" data-conutry="United Kingdom">United Kingdom</div><div class="country_option" data-conutry="France">France</div><div class="country_option" data-conutry="Germany">Germany</div><div class="country_option" data-conutry="Italy">Italy</div><div class="country_option" data-conutry="Poland">Poland</div><div class="country_option" data-conutry="Malaysia">Malaysia</div><div class="country_option" data-conutry="Spain">Spain</div><div class="country_option" data-conutry="Thailand">Thailand</div><div class="country_option" data-conutry="Aland Islands">Aland Islands</div><div class="country_option" data-conutry="Albania">Albania</div><div class="country_option" data-conutry="Algeria">Algeria</div><div class="country_option" data-conutry="American Samoa">American Samoa</div><div class="country_option" data-conutry="Andorra">Andorra</div><div class="country_option" data-conutry="Angola">Angola</div><div class="country_option" data-conutry="Anguilla">Anguilla</div><div class="country_option" data-conutry="Antarctica">Antarctica</div><div class="country_option" data-conutry="Antigua and Barbuda">Antigua and Barbuda</div><div class="country_option" data-conutry="Argentina">Argentina</div><div class="country_option" data-conutry="Armenia">Armenia</div><div class="country_option" data-conutry="Aruba">Aruba</div><div class="country_option" data-conutry="Austria">Austria</div><div class="country_option" data-conutry="Azerbaijan">Azerbaijan</div><div class="country_option" data-conutry="Bahamas">Bahamas</div><div class="country_option" data-conutry="Bahrain">Bahrain</div><div class="country_option" data-conutry="Bangladesh">Bangladesh</div><div class="country_option" data-conutry="Barbados">Barbados</div><div class="country_option" data-conutry="Belgium">Belgium</div><div class="country_option" data-conutry="Belize">Belize</div><div class="country_option" data-conutry="Benin">Benin</div><div class="country_option" data-conutry="Bhutan">Bhutan</div><div class="country_option" data-conutry="Bolivia">Bolivia</div><div class="country_option" data-conutry="Botswana">Botswana</div><div class="country_option" data-conutry="Bouvet Island">Bouvet Island</div><div class="country_option" data-conutry="Brazil">Brazil</div><div class="country_option" data-conutry="British Indian Ocean Territory">British Indian Ocean Territory</div><div class="country_option" data-conutry="Brunei Darussalam">Brunei Darussalam</div><div class="country_option" data-conutry="Bulgaria">Bulgaria</div><div class="country_option" data-conutry="Burkina Faso">Burkina Faso</div><div class="country_option" data-conutry="Burundi">Burundi</div><div class="country_option" data-conutry="Cambodia">Cambodia</div><div class="country_option" data-conutry="Cameroon">Cameroon</div><div class="country_option" data-conutry="Cape Verde">Cape Verde</div><div class="country_option" data-conutry="Cayman Islands">Cayman Islands</div><div class="country_option" data-conutry="Chad">Chad</div><div class="country_option" data-conutry="Chile">Chile</div><div class="country_option" data-conutry="China">China</div><div class="country_option" data-conutry="Christmas Island">Christmas Island</div><div class="country_option" data-conutry="Cocos (Keeling) Islands">Cocos (Keeling) Islands</div><div class="country_option" data-conutry="Colombia">Colombia</div><div class="country_option" data-conutry="Comoros">Comoros</div><div class="country_option" data-conutry="Cook Islands">Cook Islands</div><div class="country_option" data-conutry="Costa Rica">Costa Rica</div><div class="country_option" data-conutry="Côte d'Ivoire">Côte d'Ivoire</div><div class="country_option" data-conutry="Croatia">Croatia</div><div class="country_option" data-conutry="Cyprus">Cyprus</div><div class="country_option" data-conutry="Czech Republic">Czech Republic</div><div class="country_option" data-conutry="Denmark">Denmark</div><div class="country_option" data-conutry="Djibouti">Djibouti</div><div class="country_option" data-conutry="Dominica">Dominica</div><div class="country_option" data-conutry="Dominican Republic">Dominican Republic</div><div class="country_option" data-conutry="Ecuador">Ecuador</div><div class="country_option" data-conutry="Egypt">Egypt</div><div class="country_option" data-conutry="El Salvador">El Salvador</div><div class="country_option" data-conutry="Equatorial Guinea">Equatorial Guinea</div><div class="country_option" data-conutry="Estonia">Estonia</div><div class="country_option" data-conutry="Ethiopia">Ethiopia</div><div class="country_option" data-conutry="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</div><div class="country_option" data-conutry="Faroe Islands">Faroe Islands</div><div class="country_option" data-conutry="Federated States Of Micronesia Micronesia">Federated States Of Micronesia Micronesia</div><div class="country_option" data-conutry="Finland">Finland</div><div class="country_option" data-conutry="Fiji">Fiji</div><div class="country_option" data-conutry="French Guiana">French Guiana</div><div class="country_option" data-conutry="French Polynesia">French Polynesia</div><div class="country_option" data-conutry="French Southern Territories">French Southern Territories</div><div class="country_option" data-conutry="Gabon">Gabon</div><div class="country_option" data-conutry="Gambia">Gambia</div><div class="country_option" data-conutry="Georgia">Georgia</div><div class="country_option" data-conutry="Ghana">Ghana</div><div class="country_option" data-conutry="Gibraltar">Gibraltar</div><div class="country_option" data-conutry="Greece">Greece</div><div class="country_option" data-conutry="Greenland">Greenland</div><div class="country_option" data-conutry="Grenada">Grenada</div><div class="country_option" data-conutry="Guadeloupe">Guadeloupe</div><div class="country_option" data-conutry="Guatemala">Guatemala</div><div class="country_option" data-conutry="Guernsey">Guernsey</div><div class="country_option" data-conutry="Guinea">Guinea</div><div class="country_option" data-conutry="Guyana">Guyana</div><div class="country_option" data-conutry="Haiti">Haiti</div><div class="country_option" data-conutry="Heard Island And Mcdonald Islands">Heard Island And Mcdonald Islands</div><div class="country_option" data-conutry="Honduras">Honduras</div><div class="country_option" data-conutry="HongKong">HongKong</div><div class="country_option" data-conutry="Hungary">Hungary</div><div class="country_option" data-conutry="Iceland">Iceland</div><div class="country_option" data-conutry="India">India</div><div class="country_option" data-conutry="Indonesia">Indonesia</div><div class="country_option" data-conutry="Ireland">Ireland</div><div class="country_option" data-conutry="Isle Of Man">Isle Of Man</div><div class="country_option" data-conutry="Israel">Israel</div><div class="country_option" data-conutry="Jamaica">Jamaica</div><div class="country_option" data-conutry="Japan">Japan</div><div class="country_option" data-conutry="Jersey">Jersey</div><div class="country_option" data-conutry="Jordan">Jordan</div><div class="country_option" data-conutry="Kazakhstan">Kazakhstan</div><div class="country_option" data-conutry="Kenya">Kenya</div><div class="country_option" data-conutry="Kiribati">Kiribati</div><div class="country_option" data-conutry="Korea, Republic Of">Korea, Republic Of</div><div class="country_option" data-conutry="Kosovo">Kosovo</div><div class="country_option" data-conutry="Kuwait">Kuwait</div><div class="country_option" data-conutry="Kyrgyzstan">Kyrgyzstan</div><div class="country_option" data-conutry="Laos">Laos</div><div class="country_option" data-conutry="Latvia">Latvia</div><div class="country_option" data-conutry="Lesotho">Lesotho</div><div class="country_option" data-conutry="Liberia">Liberia</div><div class="country_option" data-conutry="Liechtenstein">Liechtenstein</div><div class="country_option" data-conutry="Lithuania">Lithuania</div><div class="country_option" data-conutry="Luxembourg">Luxembourg</div><div class="country_option" data-conutry="Macao">Macao</div><div class="country_option" data-conutry="Madagascar">Madagascar</div><div class="country_option" data-conutry="Malawi">Malawi</div><div class="country_option" data-conutry="Maldives">Maldives</div><div class="country_option" data-conutry="Mali">Mali</div><div class="country_option" data-conutry="Malta">Malta</div><div class="country_option" data-conutry="Marshall Islands">Marshall Islands</div><div class="country_option" data-conutry="Martinique">Martinique</div><div class="country_option" data-conutry="Mauritania">Mauritania</div><div class="country_option" data-conutry="Mauritius">Mauritius</div><div class="country_option" data-conutry="Mayotte">Mayotte</div><div class="country_option" data-conutry="Macedonia">Macedonia</div><div class="country_option" data-conutry="Mexico">Mexico</div><div class="country_option" data-conutry="Moldova">Moldova</div><div class="country_option" data-conutry="Monaco">Monaco</div><div class="country_option" data-conutry="Mongolia">Mongolia</div><div class="country_option" data-conutry="Montserrat">Montserrat</div><div class="country_option" data-conutry="Morocco">Morocco</div><div class="country_option" data-conutry="Mozambique">Mozambique</div><div class="country_option" data-conutry="Namibia">Namibia</div><div class="country_option" data-conutry="Nauru">Nauru</div><div class="country_option" data-conutry="Nepal">Nepal</div><div class="country_option" data-conutry="Netherlands">Netherlands</div><div class="country_option" data-conutry="Netherlands Antilles">Netherlands Antilles</div><div class="country_option" data-conutry="New Caledonia">New Caledonia</div><div class="country_option" data-conutry="New Zealand">New Zealand</div><div class="country_option" data-conutry="Nicaragua">Nicaragua</div><div class="country_option" data-conutry="Niger">Niger</div><div class="country_option" data-conutry="Nigeria">Nigeria</div><div class="country_option" data-conutry="Niue">Niue</div><div class="country_option" data-conutry="Norfolk Island">Norfolk Island</div><div class="country_option" data-conutry="NorthernÂ MarianaÂ Islands">NorthernÂ MarianaÂ Islands</div><div class="country_option" data-conutry="Norway">Norway</div><div class="country_option" data-conutry="Oman">Oman</div><div class="country_option" data-conutry="Pakistan">Pakistan</div><div class="country_option" data-conutry="Palau">Palau</div><div class="country_option" data-conutry="Palestinian Territory, Occupied">Palestinian Territory, Occupied</div><div class="country_option" data-conutry="Panama">Panama</div><div class="country_option" data-conutry="Papua New Guinea">Papua New Guinea</div><div class="country_option" data-conutry="Paraguay">Paraguay</div><div class="country_option" data-conutry="Peru">Peru</div><div class="country_option" data-conutry="Philippines">Philippines</div><div class="country_option" data-conutry="Pitcairn">Pitcairn</div><div class="country_option" data-conutry="Portugal">Portugal</div><div class="country_option" data-conutry="Puerto Rico">Puerto Rico</div><div class="country_option" data-conutry="Qatar">Qatar</div><div class="country_option" data-conutry="Reunion">Reunion</div><div class="country_option" data-conutry="Romania">Romania</div><div class="country_option" data-conutry="Rwanda">Rwanda</div><div class="country_option" data-conutry="Saint Barthelemy">Saint Barthelemy</div><div class="country_option" data-conutry="Saint Helena">Saint Helena</div><div class="country_option" data-conutry="Saint Kitts and Nevis">Saint Kitts and Nevis</div><div class="country_option" data-conutry="Saint Lucia">Saint Lucia</div><div class="country_option" data-conutry="Saint Martin">Saint Martin</div><div class="country_option" data-conutry="Saint Pierre And Miquelon">Saint Pierre And Miquelon</div><div class="country_option" data-conutry="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</div><div class="country_option" data-conutry="Samoa">Samoa</div><div class="country_option" data-conutry="San Marino">San Marino</div><div class="country_option" data-conutry="Sao Tome and Principe">Sao Tome and Principe</div><div class="country_option" data-conutry="Saudi Arabia">Saudi Arabia</div><div class="country_option" data-conutry="Senegal">Senegal</div><div class="country_option" data-conutry="Serbia">Serbia</div><div class="country_option" data-conutry="Seychelles">Seychelles</div><div class="country_option" data-conutry="Slovakia">Slovakia</div><div class="country_option" data-conutry="Slovenia">Slovenia</div><div class="country_option" data-conutry="Solomon Islands">Solomon Islands</div><div class="country_option" data-conutry="South Africa">South Africa</div><div class="country_option" data-conutry="South Georgia And The South Sandwich Islands">South Georgia And The South Sandwich Islands</div><div class="country_option" data-conutry="Sri Lanka">Sri Lanka</div><div class="country_option" data-conutry="Suriname">Suriname</div><div class="country_option" data-conutry="Svalbard And Jan Mayen">Svalbard And Jan Mayen</div><div class="country_option" data-conutry="Swaziland">Swaziland</div><div class="country_option" data-conutry="Sweden">Sweden</div><div class="country_option" data-conutry="Switzerland">Switzerland</div><div class="country_option" data-conutry="Taiwan">Taiwan</div><div class="country_option" data-conutry="Taiwan, Province Of China">Taiwan, Province Of China</div><div class="country_option" data-conutry="Tajikistan">Tajikistan</div><div class="country_option" data-conutry="Tanzania, United Republic Of">Tanzania, United Republic Of</div><div class="country_option" data-conutry="Timor">Timor</div><div class="country_option" data-conutry="Togo">Togo</div><div class="country_option" data-conutry="Tokelau">Tokelau</div><div class="country_option" data-conutry="Tonga">Tonga</div><div class="country_option" data-conutry="Trinidad and Tobago">Trinidad and Tobago</div><div class="country_option" data-conutry="Turkey">Turkey</div><div class="country_option" data-conutry="Turkmenistan">Turkmenistan</div><div class="country_option" data-conutry="Turks And Caicos Islands">Turks And Caicos Islands</div><div class="country_option" data-conutry="Tuvalu">Tuvalu</div><div class="country_option" data-conutry="Uganda">Uganda</div><div class="country_option" data-conutry="United Arab Emirates">United Arab Emirates</div><div class="country_option" data-conutry="Uruguay">Uruguay</div><div class="country_option" data-conutry="Uzbekistan">Uzbekistan</div><div class="country_option" data-conutry="Vanuatu">Vanuatu</div><div class="country_option" data-conutry="Vatican City State">Vatican City State</div><div class="country_option" data-conutry="Vietnam">Vietnam</div><div class="country_option" data-conutry="Virgin Islands, British">Virgin Islands, British</div><div class="country_option" data-conutry="Wallis And Futuna">Wallis And Futuna</div><div class="country_option" data-conutry="Western Sahara">Western Sahara</div><div class="country_option" data-conutry="Zambia">Zambia</div></div>
+                                    </li>
+                                    <div class="form_body_phone_code">
+                                        <li class="form_body_li form_body_code">
+                                            <label class="gfield_label">Code</label>
+                                            <div class="ginput_container">
+                                                <div class="ginput_container_input">
+                                                    <input class="medium" type="text" id="phoneCode" autocomplete="off" readonly="readonly">
+                                                </div>
+                                                <div class="ginput_container_input_select_icon"><img src="/wp-content/themes/vt/images/ginput_container_input_select_icon.png" alt="" class="lazyloaded" data-ll-status="loaded"><noscript><img src="/wp-content/themes/vt/images/ginput_container_input_select_icon.png" alt=""></noscript></div>
+                                            </div>
+                                            <div class="phone_code"><div class="phone_option accounr_hover" style="pointer-events: none;">Code</div><div class="phone_option" data-phone="44">44</div><div class="phone_option" data-phone="33">33</div><div class="phone_option" data-phone="49">49</div><div class="phone_option" data-phone="39">39</div><div class="phone_option" data-phone="48">48</div><div class="phone_option" data-phone="60">60</div><div class="phone_option" data-phone="34">34</div><div class="phone_option" data-phone="66">66</div><div class="phone_option" data-phone="358">358</div><div class="phone_option" data-phone="355">355</div><div class="phone_option" data-phone="213">213</div><div class="phone_option" data-phone="1684">1684</div><div class="phone_option" data-phone="376">376</div><div class="phone_option" data-phone="244">244</div><div class="phone_option" data-phone="1264">1264</div><div class="phone_option" data-phone="672">672</div><div class="phone_option" data-phone="1268">1268</div><div class="phone_option" data-phone="54">54</div><div class="phone_option" data-phone="374">374</div><div class="phone_option" data-phone="297">297</div><div class="phone_option" data-phone="43">43</div><div class="phone_option" data-phone="994">994</div><div class="phone_option" data-phone="1242">1242</div><div class="phone_option" data-phone="973">973</div><div class="phone_option" data-phone="880">880</div><div class="phone_option" data-phone="1246">1246</div><div class="phone_option" data-phone="32">32</div><div class="phone_option" data-phone="501">501</div><div class="phone_option" data-phone="229">229</div><div class="phone_option" data-phone="975">975</div><div class="phone_option" data-phone="591">591</div><div class="phone_option" data-phone="267">267</div><div class="phone_option" data-phone="147">147</div><div class="phone_option" data-phone="55">55</div><div class="phone_option" data-phone="246">246</div><div class="phone_option" data-phone="673">673</div><div class="phone_option" data-phone="359">359</div><div class="phone_option" data-phone="226">226</div><div class="phone_option" data-phone="257">257</div><div class="phone_option" data-phone="855">855</div><div class="phone_option" data-phone="237">237</div><div class="phone_option" data-phone="238">238</div><div class="phone_option" data-phone="1345">1345</div><div class="phone_option" data-phone="235">235</div><div class="phone_option" data-phone="56">56</div><div class="phone_option" data-phone="86">86</div><div class="phone_option" data-phone="61">61</div><div class="phone_option" data-phone="57">57</div><div class="phone_option" data-phone="269">269</div><div class="phone_option" data-phone="682">682</div><div class="phone_option" data-phone="506">506</div><div class="phone_option" data-phone="225">225</div><div class="phone_option" data-phone="385">385</div><div class="phone_option" data-phone="357">357</div><div class="phone_option" data-phone="420">420</div><div class="phone_option" data-phone="45">45</div><div class="phone_option" data-phone="253">253</div><div class="phone_option" data-phone="1767">1767</div><div class="phone_option" data-phone="1809">1809</div><div class="phone_option" data-phone="593">593</div><div class="phone_option" data-phone="20">20</div><div class="phone_option" data-phone="503">503</div><div class="phone_option" data-phone="240">240</div><div class="phone_option" data-phone="372">372</div><div class="phone_option" data-phone="251">251</div><div class="phone_option" data-phone="500">500</div><div class="phone_option" data-phone="298">298</div><div class="phone_option" data-phone="691">691</div><div class="phone_option" data-phone="679">679</div><div class="phone_option" data-phone="594">594</div><div class="phone_option" data-phone="689">689</div><div class="phone_option" data-phone="262">262</div><div class="phone_option" data-phone="241">241</div><div class="phone_option" data-phone="220">220</div><div class="phone_option" data-phone="995">995</div><div class="phone_option" data-phone="233">233</div><div class="phone_option" data-phone="350">350</div><div class="phone_option" data-phone="30">30</div><div class="phone_option" data-phone="299">299</div><div class="phone_option" data-phone="1473">1473</div><div class="phone_option" data-phone="590">590</div><div class="phone_option" data-phone="502">502</div><div class="phone_option" data-phone="224">224</div><div class="phone_option" data-phone="592">592</div><div class="phone_option" data-phone="509">509</div><div class="phone_option" data-phone="11">11</div><div class="phone_option" data-phone="504">504</div><div class="phone_option" data-phone="852">852</div><div class="phone_option" data-phone="36">36</div><div class="phone_option" data-phone="354">354</div><div class="phone_option" data-phone="91">91</div><div class="phone_option" data-phone="62">62</div><div class="phone_option" data-phone="353">353</div><div class="phone_option" data-phone="972">972</div><div class="phone_option" data-phone="1876">1876</div><div class="phone_option" data-phone="81">81</div><div class="phone_option" data-phone="962">962</div><div class="phone_option" data-phone="77">77</div><div class="phone_option" data-phone="254">254</div><div class="phone_option" data-phone="686">686</div><div class="phone_option" data-phone="82">82</div><div class="phone_option" data-phone="383">383</div><div class="phone_option" data-phone="965">965</div><div class="phone_option" data-phone="996">996</div><div class="phone_option" data-phone="856">856</div><div class="phone_option" data-phone="371">371</div><div class="phone_option" data-phone="266">266</div><div class="phone_option" data-phone="231">231</div><div class="phone_option" data-phone="423">423</div><div class="phone_option" data-phone="370">370</div><div class="phone_option" data-phone="352">352</div><div class="phone_option" data-phone="853">853</div><div class="phone_option" data-phone="261">261</div><div class="phone_option" data-phone="265">265</div><div class="phone_option" data-phone="960">960</div><div class="phone_option" data-phone="223">223</div><div class="phone_option" data-phone="356">356</div><div class="phone_option" data-phone="692">692</div><div class="phone_option" data-phone="596">596</div><div class="phone_option" data-phone="222">222</div><div class="phone_option" data-phone="230">230</div><div class="phone_option" data-phone="389">389</div><div class="phone_option" data-phone="52">52</div><div class="phone_option" data-phone="373">373</div><div class="phone_option" data-phone="377">377</div><div class="phone_option" data-phone="976">976</div><div class="phone_option" data-phone="1664">1664</div><div class="phone_option" data-phone="212">212</div><div class="phone_option" data-phone="258">258</div><div class="phone_option" data-phone="264">264</div><div class="phone_option" data-phone="674">674</div><div class="phone_option" data-phone="977">977</div><div class="phone_option" data-phone="31">31</div><div class="phone_option" data-phone="599">599</div><div class="phone_option" data-phone="687">687</div><div class="phone_option" data-phone="64">64</div><div class="phone_option" data-phone="505">505</div><div class="phone_option" data-phone="227">227</div><div class="phone_option" data-phone="234">234</div><div class="phone_option" data-phone="683">683</div><div class="phone_option" data-phone="670">670</div><div class="phone_option" data-phone="47">47</div><div class="phone_option" data-phone="968">968</div><div class="phone_option" data-phone="92">92</div><div class="phone_option" data-phone="680">680</div><div class="phone_option" data-phone="970">970</div><div class="phone_option" data-phone="507">507</div><div class="phone_option" data-phone="675">675</div><div class="phone_option" data-phone="595">595</div><div class="phone_option" data-phone="51">51</div><div class="phone_option" data-phone="63">63</div><div class="phone_option" data-phone="351">351</div><div class="phone_option" data-phone="1787">1787</div><div class="phone_option" data-phone="974">974</div><div class="phone_option" data-phone="40">40</div><div class="phone_option" data-phone="250">250</div><div class="phone_option" data-phone="290">290</div><div class="phone_option" data-phone="1869">1869</div><div class="phone_option" data-phone="1758">1758</div><div class="phone_option" data-phone="508">508</div><div class="phone_option" data-phone="1784">1784</div><div class="phone_option" data-phone="685">685</div><div class="phone_option" data-phone="378">378</div><div class="phone_option" data-phone="239">239</div><div class="phone_option" data-phone="966">966</div><div class="phone_option" data-phone="221">221</div><div class="phone_option" data-phone="381">381</div><div class="phone_option" data-phone="248">248</div><div class="phone_option" data-phone="421">421</div><div class="phone_option" data-phone="386">386</div><div class="phone_option" data-phone="677">677</div><div class="phone_option" data-phone="27">27</div><div class="phone_option" data-phone="94">94</div><div class="phone_option" data-phone="597">597</div><div class="phone_option" data-phone="268">268</div><div class="phone_option" data-phone="46">46</div><div class="phone_option" data-phone="41">41</div><div class="phone_option" data-phone="886">886</div><div class="phone_option" data-phone="992">992</div><div class="phone_option" data-phone="255">255</div><div class="phone_option" data-phone="228">228</div><div class="phone_option" data-phone="690">690</div><div class="phone_option" data-phone="676">676</div><div class="phone_option" data-phone="1868">1868</div><div class="phone_option" data-phone="90">90</div><div class="phone_option" data-phone="993">993</div><div class="phone_option" data-phone="1649">1649</div><div class="phone_option" data-phone="688">688</div><div class="phone_option" data-phone="256">256</div><div class="phone_option" data-phone="971">971</div><div class="phone_option" data-phone="598">598</div><div class="phone_option" data-phone="998">998</div><div class="phone_option" data-phone="678">678</div><div class="phone_option" data-phone="379">379</div><div class="phone_option" data-phone="84">84</div><div class="phone_option" data-phone="1284">1284</div><div class="phone_option" data-phone="681">681</div><div class="phone_option" data-phone="260">260</div></div>
+                                        </li>
+                                        <li class="form_body_li form_body_phone">
+                                            <label class="gfield_label">Phone</label>
+                                            <div class="ginput_container">
+                                                <div class="ginput_container_input">
+                                                    <input class="medium" type="text" id="phone" autocomplete="off">
+                                                </div>
+                                                <span class="error_info">Please enter a valid phone number</span>
+                                            </div>
+                                        </li>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <li class="form_body_li">
+                                        <label class="gfield_label">Email Address</label>
+                                        <div class="ginput_container">
+                                            <div class="ginput_container_input">
+                                                <input class="medium" type="text" id="email" autocomplete="off">
+                                                    <input type="hidden" id="affid" class="affid" value="">
+                                                    <input type="hidden" id="cpaid" class="cpaid" value="">
+                                                    <input type="hidden" id="wid" class="wid" value="VT">
+                                                    <input type="hidden" id="cxd" class="cxd" value="">
+                                                    <input type="hidden" id="ls" class="ls" value="">
+                                            </div>
+                                            <span class="error_info">Please enter a valid email address</span>
+                                        </div>
+                                    </li>
+                                </ul>
+        
+                                <form action="https://myaccount.vtmarkets.com/api/registration/register" id="live_form" method="post">
+                                    <div class="form_footer">
+                                        <input type="text" style="display:none;" id="dis_btn" name="text">
+                                        <button type="button" class="blue_button" id="button">Open a live account</button>
+                                    </div>
+                                </form>
+        
+                            </div>
+                            <!-- <p class="open_live_account_form_p">VT Markets (Trading under VT Markets LLC) is regulated by CIMA.</p> -->
+        
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script src="/style.js"></script>
+</body>
+</html>
