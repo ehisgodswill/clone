@@ -27,4 +27,7 @@ app.get('/tools/education/learn-forex', (req,res)=>{
 })
 app.get('/get-trading/forex-trading-account/', (req, res)=>{
     res.sendFile(path.resolve(__dirname,'forex-trading-account.html'))
+});
+app.get('/trading/markets/forex', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'forex.html'));
 })
