@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Choose Us | VT Markets</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="oblivian-text-cufonfonts-webfont/style.css">
-    <link rel="stylesheet" href="aboutus.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/oblivian-text-cufonfonts-webfont/style.css">
+    <link rel="stylesheet" href="/css/aboutus.css">
 </head>
 <body>
     <section id="head">
@@ -44,7 +44,7 @@
                 <div id="btn">Start trading now</div>
             </ul>
         </div>
-        <div style="background-image: url(images/Company_Why-choose-us_Why-choose-VT.jpg);"></div>
+        <div style="background-image: url(/images/Company_Why-choose-us_Why-choose-VT.jpg);"></div>
     </section>
     <section class="award">
         <div>
@@ -58,33 +58,38 @@
         </div>
 
         <script>
-            const prev= document.getElementById('prev');
-            const next= document.getElementById('next');
-            var slideno = 0
+            const prev = document.getElementById('prev');
+            const next = document.getElementById('next');
             
-            slide(slideno);
-            
+            var slideno = 0;
             function move(n){
-                slide(sildeno += n)
-                alert(slideno)
-                function slide(n){
-                    var btn = document.getElementById('reg')
-                    if (n=0) {
-                        btn.style.transform = 'translate3d(0px, 0px, 0px)';
-                        prev.className += " disabled"
-                    }
-    
-                    if (n = 1){
-                        btn.style.transform = 'translate3d(-291.5px, 0px, 0px)';
-                        //    alert('hh');
-                        prev.className =  prev.className.replace('disabled','')
-                    }
-                    if (n=2) {
-                        btn.style.transform = 'translate3d(-583px, 0px, 0px)';
-                        next.className += ' disabled'
-                    }
+                slideno = slideno + n;
+                slide(slideno);
+                
+                
+                function slide(sliden) {
+                    
+                    var btn = document.getElementById('reg');
+                    if (slideno == 0) {
+                            btn.style.transform = 'translate3d(0px, 0px, 0px)';
+                            prev.className = "prev disabled";
+                            next.className = 'next'
+                        }
+        
+                    if (slideno == 1){
+                            btn.style.transform = 'translate3d(-281px, 0px, 0px)';
+                            prev.className =  'prev';
+                            next.className = 'next';
+                        }
+                    if (slideno == 2) {
+                            btn.style.transform = 'translate3d(-583px, 0px, 0px)';
+                            next.className =  'next disabled';
+                            prev.className = 'prev';
+
+                        }
                 }
             }
+     
             </script>
     </section>
     <section class="regbtm"> 
