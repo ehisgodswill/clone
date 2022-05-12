@@ -25,13 +25,29 @@ for (let i = 0; i < input.length; i++) {
       //  input[i].parentElement.parentElement.previousElementSibling.classList.remove('active')
         input[i].parentElement.nextElementSibling.classList.remove('active');
         input[i].parentElement.parentElement.nextElementSibling?.classList.remove('active');
-        console.log(input[i].value)
+        
          if (input[i].value == "") {
              input[i].parentElement.parentElement.previousElementSibling.classList.remove('active')
          }
     })
-}
+  }
 
+
+  function checkval() {
+    for (let cc = 0; cc < input.length; cc++) {
+      const c = input[cc];
+      
+      if (c.value == '' || c.value == undefined) {
+        c.parentElement.parentElement.parentElement.classList.add('error')
+      }
+      else {
+        c.parentElement.parentElement.parentElement.classList.remove('error')
+      }
+
+    }
+  }
+
+console.log(input)
 
 const tab = document.querySelectorAll('.accordion_content_list_row');
 for (let j = 0; j < tab.length; j++) {
@@ -49,10 +65,9 @@ for (let j = 0; j < tab.length; j++) {
       else {
         g.firstElementChild.classList.remove('active')
         g.lastElementChild.setAttribute('style', 'display:none;');
-        console.log(h.parentElement.classList);
+
       }
     })
     //console.log(h.classList)
   } 
 }
-console.log(tab)

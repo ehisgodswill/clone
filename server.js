@@ -31,3 +31,6 @@ app.get('/get-trading/forex-trading-account/', (req, res)=>{
 app.get('/trading/markets/forex', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'forex.html'));
 })
+app.get('/company/company-updates/contact-us/', (req, res)=>{
+    res.sendFile(path.resolve(__dirname,'contact-us.html'))
+})
